@@ -1,0 +1,28 @@
+{%extends 'main.html'%}
+    {%block content%}
+
+    <div id = form-container>
+       <form action="/story" id='form' >
+       {%for input in form_data %}
+     
+           <label>{{input}}</label>
+       <input id='data 'type="text" name = {{input}}>
+       <br>
+       {%endfor%}
+       <label for="drow-down">Select a Story</label>
+       
+       <select name="stories" id="stories-list">
+           <option value="Q1"></option>
+           <option value="Q2"></option>
+           <option value="Q3"></option>
+           <option value="Q4"></option>
+           <option value="Q5"></option>
+       </select>
+       <input type="submit">
+       
+    </form>  
+    
+    </div>
+    {% endblock content %}
+
+
